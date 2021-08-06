@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>John Doe | Contact Me</title>
+		<script
+			src="https://kit.fontawesome.com/ba0aa7f5da.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<header id="sub-header">
+			<div class="container">
+				<nav id="main-nav">
+					<img src="./img/logo.png" alt="Logo" id="logo" />
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li><a href="contact.html" class="active">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="section-contactme" class="section-heading">
+			<div class="container">
+				<h2>Contact Me</h2>
+				<div class="line"></div>
+				<p class="lead">Here is how you can reach me</p>
+				<form action="process.php">
+					<div class="form-grid">
+						<input
+							type="text"
+							placeholder="Name"
+							name="name"
+							id="name"
+							class="form-name"
+						/>
+						<input
+							type="email"
+							placeholder="Email Address"
+							name="email"
+							id="email"
+							class="form-email"
+						/>
+						<input
+							type="text"
+							placeholder="Subject"
+							name="subject"
+							id="subject"
+							class="form-subject"
+						/>
+						<input
+							type="text"
+							placeholder="Phone Number"
+							name="phone"
+							id="phone"
+							class="form-phone"
+						/>
+						<textarea
+							placeholder="Enter Message"
+							name="message"
+							class="form-message"
+						>
+						</textarea>
+					</div>
+					<input type="submit" value="Submit" class="form-button btn-dark" />
+				</form>
+			</div>
+			<section id="section-contact" class="bg-dark">
+				<div class="container">
+					<div class="card-grid">
+						<div class="card bg-dark">
+							<i class="fas fa-envelope fa-2x"></i>
+							<h3>Email</h3>
+							<p>john@something.com</p>
+						</div>
+						<div class="card bg-dark">
+							<i class="fas fa-phone fa-2x"></i>
+							<h3>Phone</h3>
+							<p>(555)555-5555</p>
+						</div>
+						<div class="card bg-dark">
+							<i class="fas fa-address-card fa-2x"></i>
+							<h3>Address</h3>
+							<p>50 High Street, London N1</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section-next" class="bg-main">
+				<h1>Let's Start Your Next Project</h1>
+			</section>
+		</section>
+		<footer id="footer">
+			<div class="container">
+				<div class="footer-flex">
+					<p>Copyright &copy; 2021. All Rights Reserved</p>
+					<div class="social">
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/typewriter.js"></script>
+	</body>
+</html>

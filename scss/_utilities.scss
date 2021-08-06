@@ -1,0 +1,135 @@
+@import "config";
+
+.container {
+	max-width: $website-width;
+	margin: auto;
+	padding: 1rem 0;
+	height: 100%;
+}
+.bg-main {
+	background: $main-color;
+	color: #fff;
+}
+.bg-white {
+	color: $dark-color;
+	background: #fff;
+	i {
+		color: $main-color;
+	}
+}
+.bg-light {
+	color: $dark-color;
+	background: $light-color;
+}
+
+.bg-medium {
+	color: $dark-color;
+	background: $medium-color;
+}
+
+.bg-dark {
+	color: #fff;
+	background-color: $dark-color;
+}
+
+%btn-shared {
+	display: inline-block;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	transition: all 0.5s;
+	border: none;
+}
+
+.btn {
+	&-main {
+		@extend %btn-shared;
+		color: $dark-color;
+		background: $main-color;
+	}
+
+	&-dark {
+		@extend %btn-shared;
+		color: $light-color;
+		background: $dark-color;
+	}
+
+	&-light {
+		@extend %btn-shared;
+		color: $dark-color;
+		background: $light-color;
+	}
+}
+
+.section-heading {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+	background: $main-color;
+}
+
+.line {
+	height: 1px;
+	width: 50px;
+	border: 1px solid $main-color;
+	margin: 1rem auto;
+}
+
+.lead {
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+}
+
+.card-grid {
+	height: 100%;
+	padding: 0.3rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+	padding: 0.5rem;
+	line-height: 1.6;
+	text-align: center;
+}
+
+#section-contactme {
+	.form-grid {
+		display: grid;
+		grid-template-areas:
+			"name email"
+			"subject phone"
+			"message message";
+		gap: 1.2rem;
+		padding: 0 2rem;
+		margin-bottom: 3rem;
+		input,
+		textarea {
+			padding: 0.5rem 1rem;
+		}
+
+		.form-name {
+			grid-area: name;
+		}
+		.form-email {
+			grid-area: email;
+		}
+		.form-subject {
+			grid-area: subject;
+		}
+		.from-phone {
+			grid-area: phone;
+		}
+
+		.form-message {
+			height: 100px;
+			grid-area: message;
+		}
+	}
+	.form-button {
+		width: 50%;
+	}
+}

@@ -1,0 +1,299 @@
+@import "config";
+@import "utilities";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Dosis", sans-serif;
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+h3 {
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+#main-header {
+	background: $bg-image no-repeat center center/cover;
+	height: 100vh;
+}
+
+#sub-header {
+	background: $bg-image no-repeat 20% 30% / cover;
+	height: 90px;
+	border-bottom: 3px solid $main-color;
+}
+
+#logo {
+	width: 70px;
+	height: 70px;
+}
+
+#main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+		padding-bottom: 0.5rem;
+
+		li {
+			padding: 1rem 1.5rem;
+			background: transparent;
+		}
+		a {
+			color: #fff;
+			text-transform: uppercase;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px transparent solid;
+			transition: all 0.5s;
+
+			&:hover {
+				border-bottom: 3px solid #fff;
+			}
+			&.active {
+				border-bottom: 3px solid $main-color;
+			}
+		}
+	}
+}
+
+.showcase {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	h1 {
+		font-size: 4rem;
+		font-weight: 600;
+	}
+	p {
+		font-size: 1.3rem;
+		margin-bottom: 2.5rem;
+	}
+}
+
+#section {
+	&-specialize {
+		height: 50vh;
+		padding: 1rem;
+		i {
+			color: $main-color;
+		}
+	}
+	&-stats {
+		h2 {
+			font-weight: 600;
+		}
+		p {
+			font-size: 1.5rem;
+			padding: 0.3rem;
+		}
+		.card {
+			padding: 3rem 0;
+		}
+		margin-bottom: 3rem;
+	}
+	&-process {
+		.process-icon {
+			margin: 0.5rem auto 2rem;
+			height: 140px;
+			width: 140px;
+			background: $dark-color;
+			border-radius: 50%;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.7s ease;
+			&:hover {
+				height: 160px;
+				width: 160px;
+				background: $main-color;
+				.super {
+					background: $dark-color;
+				}
+				i {
+					background: $main-color;
+				}
+			}
+			.super {
+				background: $main-color;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 45px;
+				height: 45px;
+				color: set-text-color($dark-color);
+				border-radius: 50%;
+				font-size: 28px;
+				font-weight: 600;
+				transition: all 0.7s ease;
+			}
+			i {
+				background: $dark-color;
+				color: set-text-color($dark-color);
+				transition: all 0.7s ease;
+			}
+		}
+	}
+	&-aboutme {
+		.card-aboutme {
+			display: grid;
+			grid-template-columns: 2fr 4fr;
+			gap: 1rem;
+			padding: 2rem;
+
+			.aboutme {
+				padding: 1rem;
+				border-left: 3px solid $main-color;
+				h4 {
+					padding: 0.5rem;
+				}
+				p {
+					line-height: 1.6;
+				}
+			}
+		}
+	}
+
+	&-awards {
+		.card-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.card {
+			i {
+				margin: 1rem 0;
+			}
+		}
+	}
+	&-skills {
+		padding: 3rem 0;
+		.progress {
+			width: 100%;
+			padding: 0 2rem;
+			text-align: left;
+			h4 {
+				margin: 1rem 0 0.3rem;
+			}
+			&-base {
+				height: 20px;
+				width: 100%;
+
+				border-radius: 5px;
+				position: relative;
+			}
+			&-line {
+				position: absolute;
+				height: 20px;
+				top: 0;
+				left: 0;
+				border-radius: 5px;
+				background: $main-color;
+				z-index: 1;
+			}
+		}
+	}
+	&-aboutlogos {
+		.card {
+			padding: 3rem;
+		}
+	}
+	&-testimonial {
+		margin-bottom: 2.5rem;
+		.card {
+			p {
+				border: 1px solid $medium-color;
+				border-radius: 5px;
+				text-align: left;
+				padding: 0.6rem;
+				margin-bottom: 1rem;
+			}
+		}
+		.testimonial {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		img {
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+		}
+	}
+	&-contact {
+		.card-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	&-next {
+		height: 25vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			font-size: 4rem;
+			font-weight: 600;
+		}
+	}
+	&-mywork .card-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+#footer {
+	color: #fff;
+	background: $dark-color;
+	padding: 0.3rem 1.5rem;
+	.footer-flex {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	i {
+		margin-right: 1rem;
+		padding: 0.7rem;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		transition: all 0.2s ease;
+		&:hover {
+			background: $main-color;
+		}
+	}
+}
